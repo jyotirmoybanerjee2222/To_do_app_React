@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #3f5efb, #fc466b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.to-do-list {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 500px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Input */
+input[type="text"] {
+  width: 70%;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  padding-left: 15px;
+}
+
+/* Buttons General Style */
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 8px 14px;
+  font-size: 1rem;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Add Button */
+.add-button {
+  background: linear-gradient(45deg, #00c853, #64dd17);
+}
+
+.add-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 200, 83, 0.5);
+}
+
+/* Delete Button */
+.delete-button {
+  background: linear-gradient(45deg, #ff3d00, #ff9100);
+}
+
+.delete-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 61, 0, 0.5);
+}
+
+/* Move Button */
+.move-button {
+  background: linear-gradient(45deg, #2979ff, #00b0ff);
+}
+
+.move-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(41, 121, 255, 0.5);
+}
+
+/* List */
+ol {
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  list-style: none;
+  background: linear-gradient(135deg, #ffffff, #f1f1f1);
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.text {
+  flex: 1;
+  font-size: 1.2rem;
+}
