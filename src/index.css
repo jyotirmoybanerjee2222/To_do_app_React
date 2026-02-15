@@ -99,3 +99,20 @@ li {
   flex: 1;
   font-size: 1.2rem;
 }
+
+
+/* Complete Button */
+.complete-button {
+  background: linear-gradient(45deg, #7b1fa2, #9c27b0);
+}
+
+.complete-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(156, 39, 176, 0.5);
+}
+
+/* Completed Task Style */
+.text.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}

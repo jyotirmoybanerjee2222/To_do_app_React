@@ -1,0 +1,345 @@
+/* styles.css */
+
+/* App Container */
+.app-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* To-Do List Styles */
+.to-do-list {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 400px;
+}
+
+.to-do-list h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2em;
+}
+
+.to-do-list input[type="text"] {
+  width: 70%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.to-do-list ol {
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.to-do-list li {
+  background-color: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.to-do-list .text {
+  flex-grow: 1;
+  margin-left: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.to-do-list .text.completed {
+  text-decoration: line-through;
+  color: #888;
+  opacity: 0.6;
+}
+
+.to-do-list button {
+  padding: 8px 15px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.add-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 25px !important;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+.complete-button {
+  background-color: #2196F3;
+  color: white;
+}
+
+.complete-button:hover {
+  background-color: #0b7dda;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #da190b;
+}
+
+.move-button {
+  background-color: #ff9800;
+  color: white;
+}
+
+.move-button:hover {
+  background-color: #e68900;
+}
+
+/* Chatbot Styles */
+.chatbot-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 500px;
+  height: 600px;
+}
+
+.chatbot-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.chatbot-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.chatbot-help {
+  margin: 10px 0 0 0;
+  font-size: 0.85em;
+  opacity: 0.9;
+}
+
+.chatbot-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.welcome-message {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.welcome-message ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.welcome-message li {
+  margin: 8px 0;
+  color: #667eea;
+  font-weight: 500;
+}
+
+.message {
+  margin: 10px 0;
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.bot {
+  justify-content: flex-start;
+}
+
+.message-bubble {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.message.user .message-bubble {
+  background-color: #667eea;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot .message-bubble {
+  background-color: white;
+  color: #333;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.typing-indicator {
+  display: inline-block;
+  font-size: 20px;
+  letter-spacing: 2px;
+  animation: blink 1.4s infinite;
+}
+
+@keyframes blink {
+  0%, 20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.chatbot-input {
+  display: flex;
+  padding: 15px;
+  background-color: white;
+  border-top: 1px solid #e0e0e0;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.chatbot-input input:focus {
+  border-color: #667eea;
+}
+
+.chatbot-input button {
+  margin-left: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.send-button {
+  background-color: #667eea;
+  color: white;
+}
+
+.send-button:hover:not(:disabled) {
+  background-color: #5568d3;
+  transform: translateY(-1px);
+}
+
+.voice-button {
+  background-color: #764ba2;
+  color: white;
+  min-width: 45px;
+}
+
+.voice-button:hover:not(:disabled) {
+  background-color: #5f3d84;
+  transform: translateY(-1px);
+}
+
+.chatbot-input button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Scrollbar Styling */
+.chatbot-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatbot-messages::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .app-container {
+    flex-direction: column;
+  }
+  
+  .to-do-list,
+  .chatbot-container {
+    max-width: 100%;
+  }
+  
+  .chatbot-container {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .to-do-list {
+    min-width: auto;
+    padding: 20px;
+  }
+  
+  .to-do-list input[type="text"] {
+    width: 60%;
+  }
+  
+  .to-do-list li {
+    flex-wrap: wrap;
+  }
+  
+  .to-do-list button {
+    margin: 5px 5px 0 0;
+  }
+}
